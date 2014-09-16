@@ -1,0 +1,16 @@
+\begin{table}
+\caption{Average 10-fold cross-validation error and standard deviation over 10 repeats. The classifiers that have been compared are supervised Least Squares (LS), Implicitly constrained least squares (ICLS), self-learned least squares (SLLS), updated covariance least squares (UCLS, see text) and for comparison a supervised least squares classifier that has access to all the labels (LSoracle). Indicated in $\mathbf{bold}$ is whether a semi-supervised classifier significantly outperform the supervised LS classifier, as measured using a $t$-test with a $0.05$ significance level. \underline{Underlined} indicates whether a semi-supervised classifier is (significantly) best among the three semi-supervised classifiers considered.} \label{table:cvresults}
+\begin{tabular}{l|llllll}
+Dataset & LS & ICLS & SLLS & UCLS & LSoracle \\ 
+\hline
+Haberman & $0.38 \pm 0.03$& $\mathbf{\underline{0.25 \pm 0.00}} $& $0.35 \pm 0.03$& $0.46 \pm 0.09$& $0.35 \pm 0.03$& $0.37 \pm 0.03$\\ 
+Ionosphere & $0.21 \pm 0.02$& $\mathbf{\underline{0.14 \pm 0.01}} $& $\mathbf{0.18 \pm 0.02} $& $0.57 \pm 0.02$& $0.20 \pm 0.01$& $\mathbf{0.18 \pm 0.01} $\\ 
+Parkinsons & $0.27 \pm 0.02$& $\mathbf{\underline{0.15 \pm 0.00}} $& $\mathbf{0.23 \pm 0.03} $& $0.33 \pm 0.06$& $0.25 \pm 0.02$& $\mathbf{0.24 \pm 0.02} $\\ 
+Pima & $0.34 \pm 0.02$& $\mathbf{\underline{0.23 \pm 0.00}} $& $\mathbf{0.31 \pm 0.02} $& $0.37 \pm 0.03$& $0.35 \pm 0.03$& $\mathbf{0.32 \pm 0.01} $\\ 
+Sonar & $0.30 \pm 0.03$& $\mathbf{\underline{0.25 \pm 0.01}} $& $0.29 \pm 0.02$& $0.35 \pm 0.03$& $0.30 \pm 0.03$& $0.29 \pm 0.02$\\ 
+SPECT & $0.30 \pm 0.03$& $\mathbf{\underline{0.18 \pm 0.01}} $& $\mathbf{0.25 \pm 0.04} $& $0.64 \pm 0.03$& $0.32 \pm 0.03$& $0.29 \pm 0.03$\\ 
+SPECTF & $0.33 \pm 0.02$& $\mathbf{\underline{0.24 \pm 0.01}} $& $\mathbf{0.29 \pm 0.02} $& $\mathbf{0.29 \pm 0.04} $& $0.34 \pm 0.02$& $0.34 \pm 0.02$\\ 
+Transfusion & $0.35 \pm 0.04$& $\mathbf{\underline{0.23 \pm 0.00}} $& $0.33 \pm 0.04$& $0.53 \pm 0.08$& $0.40 \pm 0.07$& $0.34 \pm 0.04$\\ 
+WDBC & $0.11 \pm 0.01$& $\mathbf{\underline{0.04 \pm 0.00}} $& $\mathbf{0.09 \pm 0.01} $& $0.37 \pm 0.04$& $0.09 \pm 0.01$& $\mathbf{0.08 \pm 0.01} $\\ 
+\end{tabular}
+\end{table}
