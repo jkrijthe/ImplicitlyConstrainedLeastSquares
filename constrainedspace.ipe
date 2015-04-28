@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70005" creator="Ipe 7.1.4">
-<info created="D:20131002133847" modified="D:20131018115127"/>
+<info created="D:20131002133847" modified="D:20141029101850"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -245,7 +245,7 @@ h
 <text matrix="1 0 0 1 28.1965 -34.5203" transformations="translations" pos="280 728" stroke="black" type="label" width="26.116" height="16.927" depth="9.84" valign="baseline" size="Huge">$\mathcal{C}_{\beta}$</text>
 <text matrix="1 0 0 1 46.729 -11.4106" transformations="translations" pos="448 784" stroke="black" type="label" width="30.881" height="16.927" depth="9.84" valign="baseline" size="Huge">$\mathcal{F}_{\beta}$</text>
 <use name="mark/disk(sx)" pos="224 560" size="normal" stroke="black"/>
-<text matrix="1 0 0 1 2.7168 6.01089" transformations="translations" pos="224 560" stroke="black" type="label" width="47.735" height="16.502" depth="5.38" valign="baseline" size="LARGE">$\hat{\beta}_{N_l+N_u}$</text>
+<text matrix="1 0 0 1 2.7168 6.01089" transformations="translations" pos="224 560" stroke="black" type="label" width="41.6" height="16.497" depth="3.35" valign="baseline" size="LARGE">$\hat{\beta}_{oracle}$</text>
 <use matrix="1 0 0 1 20 20" name="mark/disk(sx)" pos="338.116 646.217" size="normal" stroke="black"/>
 <text matrix="1 0 0 1 19.4566 4.5894" transformations="translations" pos="341.648 663.17" stroke="black" type="label" width="35.186" height="16.497" depth="3.35" valign="baseline" size="LARGE">$\hat{\beta}_{semi}$</text>
 <path stroke="black">

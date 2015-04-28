@@ -1,0 +1,232 @@
+\begin{thebibliography}{37}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abney(2004)]{Abney2004}
+Steven Abney.
+\newblock {Understanding the yarowsky algorithm}.
+\newblock \emph{Computational Linguistics}, 30\penalty0 (3):\penalty0 365--395,
+  2004.
+
+\bibitem[Bache and Lichman(2013)]{Bache2013}
+K.~Bache and M.~Lichman.
+\newblock {\{UCI\} Machine Learning Repository}, 2013.
+
+\bibitem[Bennett and Demiriz(1998)]{Bennett1998}
+Kristin~P. Bennett and Ayhan Demiriz.
+\newblock {Semi-supervised support vector machines}.
+\newblock In \emph{Advances in Neural Information Processing Systems 11}, 1998.
+
+\bibitem[Bottou(2010)]{Bottou2010}
+Leon Bottou.
+\newblock {Large-scale machine learning with stochastic gradient descent}.
+\newblock In \emph{Proceedings of COMPSTAT'2010}, pages 177--186. Springer,
+  2010.
+
+\bibitem[Byrd et~al.(1995)Byrd, Lu, Nocedal, and Zhu]{Byrd1995}
+Richard~H. Byrd, Peihuang Lu, Jorge Nocedal, and Ciyou Zhu.
+\newblock {A limited memory algorithm for bound constrained optimization}.
+\newblock \emph{SIAM Journal on Scientific Computing}, 1995.
+
+\bibitem[Chapelle et~al.(2006)Chapelle, Sch\"{o}lkopf, and Zien]{Chapelle2006}
+Olivier Chapelle, Bernhard Sch\"{o}lkopf, and Alexander Zien.
+\newblock \emph{{Semi-supervised learning}}.
+\newblock MIT press, 2006.
+
+\bibitem[Collobert et~al.(2006)Collobert, Sinz, Weston, and
+  Bottou]{Collobert2006}
+Ronan Collobert, Fabian Sinz, Jason Weston, and Leon Bottou.
+\newblock {Large scale transductive SVMs}.
+\newblock \emph{Journal of Machine Learning Research}, 7:\penalty0 1687--1712,
+  2006.
+
+\bibitem[Cozman and Cohen(2006)]{Cozman2006}
+F~Cozman and Ira Cohen.
+\newblock {Risks of Semi-Supervised Learning}.
+\newblock In Olivier Chapelle, Bernhard Sch\"{o}lkopf, and A~Zien, editors,
+  \emph{Semi-Supervised Learning}, chapter~4, pages 56--72. MIT press, 2006.
+
+\bibitem[Cozman et~al.(2003)Cozman, Cohen, and Cirelo]{Cozman2003}
+Fabio~Gagliardi Cozman, Ira Cohen, and Marcelo~Cesar Cirelo.
+\newblock {Semi-Supervised Learning of Mixture Models}.
+\newblock \emph{Proceedings of the Twentieth International Conference on
+  Machine Learning}, 2003.
+
+\bibitem[Culp and Michailidis(2008)]{Culp2008}
+Mark Culp and G~Michailidis.
+\newblock {An iterative algorithm for extending learners to a semi-supervised
+  setting}.
+\newblock \emph{Journal of Computational and Graphical Statistics}, 17\penalty0
+  (3):\penalty0 545--571, 2008.
+
+\bibitem[Fan et~al.(2008)Fan, Lei, and Li]{Fan2008}
+Bin Fan, Zhen Lei, and Stan~Z. Li.
+\newblock {Normalized LDA for semi-supervised learning}.
+\newblock In \emph{8th IEEE International Conference on Automatic Face \&
+  Gesture Recognition}, pages 1--6, September 2008.
+
+\bibitem[Goldberg and Zhu(2009)]{Goldberg2009}
+Andrew~B. Goldberg and Xiaojin Zhu.
+\newblock {Keepin'it real: semi-supervised learning with realistic tuning}.
+\newblock \emph{NAACL HLT 2009 Workshop on Semi-supervised Learning for Natural
+  Language Processing}, 2009.
+
+\bibitem[Grandvalet and Bengio(2005)]{Grandvalet2005}
+Yves Grandvalet and Yoshua Bengio.
+\newblock {Semi-supervised learning by entropy minimization}.
+\newblock In L.~K. Saul, Y.~Weiss, and L.~Bottou, editors, \emph{Advances in
+  Neural Information Processing Systems 17}, pages 529--536, Cambridge, MA,
+  2005. MIT Press.
+
+\bibitem[Hastie et~al.(2001)Hastie, Tibshirani, and Friedman]{Hastie2001}
+Trevor Hastie, Robert Tibshirani, and Jerome~H. Friedman.
+\newblock \emph{{The Elements of Statistical Learning}}.
+\newblock Spinger, 2001.
+
+\bibitem[Joachims(1999)]{Joachims1999}
+Thorsten Joachims.
+\newblock {Transductive inference for text classification using support vector
+  machines}.
+\newblock In \emph{Proceedings of the 16th International Conference on Machine
+  Learning}, pages 200--209. Morgan Kaufmann Publishers, 1999.
+
+\bibitem[Krijthe and Loog(2014)]{Krijthe2014}
+Jesse~H. Krijthe and Marco Loog.
+\newblock {Implicitly Constrained Semi-Supervised Linear Discriminant
+  Analysis}.
+\newblock In \emph{International Conference on Pattern Recognition}, Stockholm,
+  2014.
+
+\bibitem[Li and Zhou(2011)]{Li2011}
+Yu-Feng Li and Zhi-hua Zhou.
+\newblock {Towards making unlabeled data never hurt}.
+\newblock In \emph{Proceedings of the 28th International Conference on Machine
+  Learning}, pages 1081----1088, 2011.
+
+\bibitem[Loog(2014)]{Loog2014a}
+Marco Loog.
+\newblock {Semi-supervised linear discriminant analysis through
+  moment-constraint parameter estimation}.
+\newblock \emph{Pattern Recognition Letters}, 37:\penalty0 24--31, March 2014.
+
+\bibitem[Loog and Jensen(2014)]{Loog2014b}
+Marco Loog and Are~C Jensen.
+\newblock {Semi-Supervised Nearest Mean Classification through a constrained
+  Log-Likelihood}.
+\newblock \emph{IEEE Transactions on Neural Networks and Learning Systems},
+  2014.
+
+\bibitem[Mann and McCallum(2010)]{Mann2010}
+Gideon~S. Mann and Andrew~Kachites McCallum.
+\newblock {Generalized expectation criteria for semi-supervised learning with
+  weakly labeled data}.
+\newblock \emph{Journal of Machine Learning Research}, 11:\penalty0 955--984,
+  2010.
+
+\bibitem[McLachlan(1975)]{McLachlan1975}
+Geoffrey~J. McLachlan.
+\newblock {Iterative Reclassification Procedure for Constructing an
+  Asymptotically Optimal Rule of Allocation in Discriminant Analysis}.
+\newblock \emph{Journal of the American Statistical Association}, 70\penalty0
+  (350):\penalty0 365--369, 1975.
+
+\bibitem[Nigam et~al.(2000)Nigam, McCallum, Thrun, and Mitchell]{Nigam2000}
+Kamal Nigam, Andrew~Kachites McCallum, Sebastian Thrun, and Tom Mitchell.
+\newblock {Text classification from labeled and unlabeled documents using EM}.
+\newblock \emph{Machine learning}, 34:\penalty0 1--34, 2000.
+
+\bibitem[Opper and Kinzel(1996)]{Opper1996}
+Manfred Opper and Wolfgang Kinzel.
+\newblock {Statistical Mechanics of Generalization}.
+\newblock In Eytan Domany, J.~Leo Hemmen, and Klaus Schulten, editors,
+  \emph{Models of Neural Networks III}, pages 151--209. Springer, New York,
+  1996.
+
+\bibitem[Poggio and Smale(2003)]{Poggio2003}
+Tomaso Poggio and Steve Smale.
+\newblock {The Mathematics of Learning: Dealing with Data}.
+\newblock \emph{Notices of the AMS}, pages 537--544, 2003.
+
+\bibitem[Raudys and Duin(1998)]{Raudys1998}
+Sarunas Raudys and Robert~P.W. Duin.
+\newblock {Expected classification error of the Fisher linear classifier with
+  pseudo-inverse covariance matrix}.
+\newblock \emph{Pattern Recognition Letters}, 19\penalty0 (5-6):\penalty0
+  385--392, April 1998.
+
+\bibitem[Rifkin et~al.(2003)Rifkin, Yeo, and Poggio]{Rifkin2003}
+Ryan Rifkin, Gene Yeo, and Tomaso Poggio.
+\newblock {Regularized least-squares classification}.
+\newblock \emph{Nato Science Series Sub Series III Computer and Systems
+  Sciences 190}, 2003.
+
+\bibitem[Seeger(2001)]{Seeger2001}
+Matthias Seeger.
+\newblock {Learning with labeled and unlabeled data}.
+\newblock Technical report, 2001.
+
+\bibitem[Shaffer(1991)]{Shaffer1991}
+Juliet~Popper Shaffer.
+\newblock {The Gauss-Markov Theorem and Random Regressors}.
+\newblock \emph{The American Statistician}, 45\penalty0 (4):\penalty0 269--273,
+  1991.
+
+\bibitem[Sindhwani and Keerthi(2006)]{Sindhwani2006}
+Vikas Sindhwani and S.~S. Keerthi.
+\newblock {Large scale semi-supervised linear SVMs}.
+\newblock In \emph{Proceedings of the 29th annual international ACM SIGIR
+  conference on Research and development in information retrieval}, page 477,
+  New York, New York, USA, 2006. ACM Press.
+
+\bibitem[Singh et~al.(2008)Singh, Nowak, and Zhu]{Singh2008}
+Aarti Singh, Robert~D. Nowak, and Xiaojin Zhu.
+\newblock {Unlabeled data: Now it helps , now it doesn’t}.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  1513--1520, 2008.
+
+\bibitem[Sokolovska et~al.(2008)Sokolovska, Capp\'{e}, and
+  Yvon]{Sokolovska2008}
+Nataliya Sokolovska, Olivier Capp\'{e}, and Francois Yvon.
+\newblock {The asymptotics of semi-supervised learning in discriminative
+  probabilistic models}.
+\newblock In William~W. Cohen, Andrew McCallum, and Sam~T. Roweis, editors,
+  \emph{Proceedings of the 25th International Conference on Machine Learning},
+  pages 984--991, Helsinki, Finland, 2008. ACM Press.
+
+\bibitem[Tibshirani(1996)]{Tibshirani1996}
+Robert Tibshirani.
+\newblock {Regression shrinkage and selection via the lasso}.
+\newblock \emph{Journal of the Royal Statistical Society. Series B},
+  58\penalty0 (1):\penalty0 267--288, 1996.
+
+\bibitem[Wang and Shen(2007)]{Wang2007}
+Junhui Wang and Xiaotong Shen.
+\newblock {Large margin semi-supervised learning}.
+\newblock \emph{Journal of Machine Learning Research}, 8:\penalty0 1867--1891,
+  2007.
+
+\bibitem[Wang et~al.(2007)Wang, Shen, and Pan]{Wang2007a}
+Junhui Wang, Xiaotong Shen, and Wei Pan.
+\newblock {On transductive support vector machines}.
+\newblock \emph{Contemporary Mathematics}, 443:\penalty0 7--19, 2007.
+
+\bibitem[Widrow and Hoff(1960)]{Widrow1960}
+Bernard Widrow and Marcian~E. Hoff.
+\newblock {Adaptive switching circuits.}
+\newblock In \emph{IRE WESCON Convention Record 4}, pages 96--104, 1960.
+
+\bibitem[Yarowsky(1995)]{Yarowsky1995}
+David Yarowsky.
+\newblock {Unsupervised word sense disambiguation rivaling supervised methods}.
+\newblock \emph{Proceedings of the 33rd annual meeting on Association for
+  Computational Linguistics}, pages 189--196, 1995.
+
+\bibitem[Zhu and Goldberg(2009)]{Zhu2009}
+Xiaojin Zhu and Andrew~B. Goldberg.
+\newblock \emph{{Introduction to Semi-Supervised Learning}}, volume~3.
+\newblock Morgan \& Claypool, January 2009.
+
+\end{thebibliography}
