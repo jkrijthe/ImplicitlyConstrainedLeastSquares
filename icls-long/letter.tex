@@ -1,0 +1,32 @@
+\documentclass[fontsize=12pt, paper=a4]{scrlttr2}
+
+% Dont forget to read the KOMA-Script documentation, scrguien.pdf
+
+\setkomavar{fromname}{Jesse H. Krijthe} % your name
+\setkomavar{fromaddress}{Address \\ of \\ Sender}
+
+\setkomavar{signature}{Jesse H. Krijthe} % printed after the \closing
+\renewcommand{\raggedsignature}{\raggedright} % make the signature ragged right
+
+\setkomavar{subject}{} % subject of the letter
+
+\begin{document}
+\begin{letter}{Name and \\ Address \\ of \\ Recipient}
+
+\opening{Dear Madam/Sir,}  % eg. Hello
+
+\begin{itemize}
+  \item A novel convex formulation for robust semi-supervised learning using squared loss 
+  \item A proof that this procedure never reduces performance in terms of the squared loss for the 1-dimensional case without intercept
+  \item An empirical evaluation of the properties of this classifier
+\end{itemize}
+
+Author biographies:
+Marco Loog received an M.Sc. degree in mathematics from Utrecht University and a Ph.D. degree from the Image Sciences Institute, the Netherlands. After this lat
+ter, joyful event, he moved to Copenhagen where he acted as an Assistant and, eventually, an Associate Professor, next to which he worked as a Research Scientist at Nordic Bioscience. Following several splendid years in Denmark, Marco moved to Delft University of Technology where he now works as an Assistant Professor in the Pattern Recognition Laboratory. Currently, he is also Honorary Professor in pattern recognition at the University of Copenhagen and Chairman of Technical Committee 1 of the IAPR. Marco's principal research interest is with supervised pattern recognition in all sorts of shapes and sizes.
+
+Jesse H. Krijthe graduated with an M.Sc. in Computer Science from Delft University of Technology. He is currently affiliated with the Department of Molecular Epidemiology of the Leiden University Medical Center and the Pattern Recognition Laboratory of Delft University of Technology, both in The Netherlands. His research interests include various topics in statistical learning, particularly semi-supervised learning, missing data and meta-learning.
+\closing{Regards,} %eg. Regards
+
+\end{letter}
+\end{document}

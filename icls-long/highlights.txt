@@ -1,0 +1,3 @@
+A novel convex formulation for robust semi-supervised learning using squared loss 
+A proof that this procedure never reduces performance in terms of the squared loss for the 1-dimensional case without intercept
+An empirical evaluation of the properties of this classifier

@@ -1,0 +1,220 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Cozman2006}
+F.~Cozman, I.~Cohen, {Risks of Semi-Supervised Learning}, in: O.~Chapelle,
+  B.~Sch{\"{o}}lkopf, A.~Zien (Eds.), Semi-Supervised Learning, MIT press,
+  2006, Ch.~4, pp. 56--72.
+
+\bibitem{Cozman2003}
+F.~G. Cozman, I.~Cohen, M.~C. Cirelo, {Semi-Supervised Learning of Mixture
+  Models}, in: Proceedings of the Twentieth International Conference on Machine
+  Learning, 2003.
+
+\bibitem{Seeger2001}
+M.~Seeger, {Learning with labeled and unlabeled data}, Tech. rep. (2001).
+
+\bibitem{Singh2008}
+A.~Singh, R.~D. Nowak, X.~Zhu, {Unlabeled data: Now it helps, now it doesn't},
+  in: Advances in Neural Information Processing Systems, 2008, pp. 1513--1520.
+
+\bibitem{Hastie2001}
+T.~Hastie, R.~Tibshirani, J.~H. Friedman, {The Elements of Statistical
+  Learning}, Spinger, 2001.
+
+\bibitem{Poggio2003}
+T.~Poggio, S.~Smale, {The Mathematics of Learning: Dealing with Data}, Notices
+  of the AMS (2003) 537--544.
+
+\bibitem{Rifkin2003}
+R.~Rifkin, G.~Yeo, T.~Poggio, {Regularized least-squares classification}, Nato
+  Science Series Sub Series III Computer and Systems Sciences 190.
+
+\bibitem{Suykens1999}
+J.~A.~K. Suykens, J.~Vandewalle, {Least Squares Support Vector Machine
+  Classifiers}, Neural Processing Letters 9 (1999) 293--300.
+
+\bibitem{Tibshirani1996}
+R.~Tibshirani, {Regression shrinkage and selection via the lasso}, Journal of
+  the Royal Statistical Society. Series B 58~(1) (1996) 267--288.
+
+\bibitem{Bottou2010}
+L.~Bottou, {Large-scale machine learning with stochastic gradient descent}, in:
+  Proceedings of COMPSTAT'2010, Springer, 2010, pp. 177--186.
+
+\bibitem{Krijthe2015}
+J.~H. Krijthe, M.~Loog, {Implicitly Constrained Semi-Supervised Least Squares
+  Classification}, in: E.~Fromont, T.~D. Bie, M.~van Leeuwen (Eds.), 14th
+  International Symposium on Advances in Intelligent Data Analysis XIV, Saint
+  {\'{E}}tienne. France, 2015, pp. 158--169.
+
+\bibitem{Chapelle2006}
+O.~Chapelle, B.~Sch{\"{o}}lkopf, A.~Zien, {Semi-supervised learning}, MIT
+  press, 2006.
+
+\bibitem{Zhu2009}
+X.~Zhu, A.~B. Goldberg, {Introduction to Semi-Supervised Learning}, Vol.~3,
+  Morgan {\&} Claypool, 2009.
+\newblock \href {http://dx.doi.org/10.2200/S00196ED1V01Y200906AIM006}
+  {\path{doi:10.2200/S00196ED1V01Y200906AIM006}}.
+
+\bibitem{Nigam2000}
+K.~Nigam, A.~K. McCallum, S.~Thrun, T.~Mitchell, {Text classification from
+  labeled and unlabeled documents using EM}, Machine learning 34 (2000) 1--34.
+
+\bibitem{Kall2007}
+L.~K{\"{a}}ll, J.~D. Canterbury, J.~Weston, W.~S. Noble, M.~J. MacCoss,
+  {Semi-supervised learning for peptide identification from shotgun proteomics
+  datasets.}, Nature methods 4~(11) (2007) 923--925.
+\newblock \href {http://dx.doi.org/10.1038/nmeth1113}
+  {\path{doi:10.1038/nmeth1113}}.
+
+\bibitem{Shi2011}
+M.~Shi, B.~Zhang, {Semi-supervised learning improves gene expression-based
+  prediction of cancer recurrence}, Bioinformatics 27~(21) (2011) 3017--3023.
+
+\bibitem{Elworthy1994}
+D.~Elworthy, {Does Baum-Welch re-estimation help taggers?}, in: Proceedings of
+  the fourth conference on Applied natural language processing, 1994, pp.
+  53--58.
+\newblock \href {http://arxiv.org/abs/9410012v2} {\path{arXiv:9410012v2}}.
+
+\bibitem{Goldberg2009}
+A.~B. Goldberg, X.~Zhu, {Keepin'it real: semi-supervised learning with
+  realistic tuning}, NAACL HLT 2009 Workshop on Semi-supervised Learning for
+  Natural Language Processing.
+
+\bibitem{Wang2007a}
+J.~Wang, X.~Shen, W.~Pan, {On Transductive Support Vector Machines},
+  Contemporary Mathematics 443 (2007) 7--19.
+
+\bibitem{McLachlan1975}
+G.~J. McLachlan, {Iterative Reclassification Procedure for Constructing an
+  Asymptotically Optimal Rule of Allocation in Discriminant Analysis}, Journal
+  of the American Statistical Association 70~(350) (1975) 365--369.
+
+\bibitem{Abney2004}
+S.~Abney, {Understanding the yarowsky algorithm}, Computational Linguistics
+  30~(3) (2004) 365--395.
+
+\bibitem{Yarowsky1995}
+D.~Yarowsky, {Unsupervised word sense disambiguation rivaling supervised
+  methods}, Proceedings of the 33rd annual meeting on Association for
+  Computational Linguistics (1995) 189--196\href
+  {http://dx.doi.org/10.3115/981658.981684} {\path{doi:10.3115/981658.981684}}.
+
+\bibitem{Grandvalet2005}
+Y.~Grandvalet, Y.~Bengio, {Semi-supervised learning by entropy minimization},
+  in: L.~K. Saul, Y.~Weiss, L.~Bottou (Eds.), Advances in Neural Information
+  Processing Systems 17, MIT Press, Cambridge, MA, 2005, pp. 529--536.
+
+\bibitem{Joachims1999}
+T.~Joachims, {Transductive inference for text classification using support
+  vector machines}, in: Proceedings of the 16th International Conference on
+  Machine Learning, Morgan Kaufmann Publishers, 1999, pp. 200--209.
+
+\bibitem{Bennett1998}
+K.~P. Bennett, A.~Demiriz, {Semi-supervised support vector machines}, in:
+  Advances in Neural Information Processing Systems 11, 1998, pp. 368--374.
+
+\bibitem{Sindhwani2006}
+V.~Sindhwani, S.~S. Keerthi, {Large scale semi-supervised linear SVMs}, in:
+  Proceedings of the 29th annual international ACM SIGIR conference on Research
+  and development in information retrieval, ACM Press, New York, New York, USA,
+  2006, p. 477.
+
+\bibitem{Collobert2006}
+R.~Collobert, F.~Sinz, J.~Weston, L.~Bottou, {Large scale transductive SVMs},
+  Journal of Machine Learning Research 7 (2006) 1687--1712.
+
+\bibitem{Wang2007}
+J.~Wang, X.~Shen, {Large margin Semi-supervised Learning}, Journal of Machine
+  Learning Research 8 (2007) 1867--1891.
+
+\bibitem{Loog2010}
+M.~Loog, {Constrained Parameter Estimation for Semi-Supervised Learning: The
+  Case of the Nearest Mean Classifier}, in: Proceedings of the 2010 European
+  Conference on Machine learning and Knowledge Discovery in Databases, 2010,
+  pp. 291--304.
+
+\bibitem{Loog2014b}
+M.~Loog, A.~C. Jensen, {Semi-Supervised Nearest Mean Classification through a
+  constrained Log-Likelihood}, IEEE Transactions on Neural Networks and
+  Learning Systems 26~(5) (2014) 995 -- 1006.
+
+\bibitem{Li2011}
+Y.-F. Li, Z.-h. Zhou, {Towards making unlabeled data never hurt}, in:
+  Proceedings of the 28th International Conference on Machine Learning, 2011,
+  pp. 1081----1088.
+
+\bibitem{Little2002}
+R.~J.~A. Little, D.~B. Rubin, {Statistical Analysis with Missing Data}, 2002.
+
+\bibitem{Healy1956}
+M.~Healy, M.~Westmacott, {Missing Values in Experiments Analysed on Automatic
+  Computers}, Journal of the Royal Statistical Society 5~(3) (1956) 203--206.
+
+\bibitem{Shaffer1991}
+J.~P. Shaffer, {The Gauss-Markov Theorem and Random Regressors}, The American
+  Statistician 45~(4) (1991) 269--273.
+
+\bibitem{Fan2008}
+B.~Fan, Z.~Lei, S.~Z. Li, {Normalized LDA for Semi-supervised Learning}, in:
+  8th IEEE International Conference on Automatic Face {\&} Gesture Recognition,
+  2008, pp. 1--6.
+\newblock \href {http://dx.doi.org/10.1109/AFGR.2008.4813329}
+  {\path{doi:10.1109/AFGR.2008.4813329}}.
+
+\bibitem{Byrd1995}
+R.~H. Byrd, P.~Lu, J.~Nocedal, C.~Zhu, {A limited memory algorithm for bound
+  constrained optimization}, SIAM Journal on Scientific Computing 16~(5) (1995)
+  1190--1208.
+
+\bibitem{Sokolovska2008}
+N.~Sokolovska, O.~Capp{\'{e}}, F.~Yvon, {The asymptotics of semi-supervised
+  learning in discriminative probabilistic models}, in: W.~W. Cohen,
+  A.~McCallum, S.~T. Roweis (Eds.), Proceedings of the 25th International
+  Conference on Machine Learning, ACM Press, Helsinki, Finland, 2008, pp.
+  984--991.
+
+\bibitem{Bache2013}
+K.~Bache, M.~Lichman, \href{http://archive.ics.uci.edu/ml}{{{\{}UCI{\}} Machine
+  Learning Repository}} (2013).
+\newline\urlprefix\url{http://archive.ics.uci.edu/ml}
+
+\bibitem{Opper1996}
+M.~Opper, W.~Kinzel, {Statistical Mechanics of Generalization}, in: E.~Domany,
+  J.~L. Hemmen, K.~Schulten (Eds.), Models of Neural Networks III, Springer,
+  New York, 1996, pp. 151--209.
+\newblock \href {http://dx.doi.org/10.1007/978-1-4612-0723-8{\_}5}
+  {\path{doi:10.1007/978-1-4612-0723-8{\_}5}}.
+
+\bibitem{Raudys1998}
+S.~Raudys, R.~P. Duin, {Expected classification error of the Fisher linear
+  classifier with pseudo-inverse covariance matrix}, Pattern Recognition
+  Letters 19~(5-6) (1998) 385--392.
+\newblock \href {http://dx.doi.org/10.1016/S0167-8655(98)00016-6}
+  {\path{doi:10.1016/S0167-8655(98)00016-6}}.
+
+\bibitem{Skurichina1999}
+M.~Skurichina, R.~P.~W. Duin, {Regularisation of Linear Classifiers by Adding
+  Redundant Features}, Pattern Analysis {\&} Applications 2~(1) (1999) 44--52.
+\newblock \href {http://dx.doi.org/10.1007/s100440050013}
+  {\path{doi:10.1007/s100440050013}}.
+
+\bibitem{Loog2016a}
+M.~Loog, J.~H. Krijthe, A.~C. Jensen, {On Measuring and Quantifying
+  Performance: Error Rates, Surrogate Loss, and an Example in SSL}, in: C.~H.
+  Chen (Ed.), Handbook of Pattern Recognition and Computer Vision, 5th Edition,
+  World Scientific, 2016, Ch. 1.3.
+
+\bibitem{Krijthe2014}
+J.~H. Krijthe, M.~Loog, {Implicitly Constrained Semi-Supervised Linear
+  Discriminant Analysis}, in: International Conference on Pattern Recognition,
+  Stockholm, 2014, pp. 3762--3767.
+
+\end{thebibliography}
