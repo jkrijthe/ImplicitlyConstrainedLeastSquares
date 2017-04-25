@@ -1,3 +1,11 @@
 .Rproj.user
 .Rhistory
 .RData
+correspondence/
+PR-revision/
+*.aux
+*.blg
+*.log
+*.dvi
+*concordance.tex
+*synctex.gz

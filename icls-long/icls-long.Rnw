@@ -1,56 +1,29 @@
+<<theme-thesis,echo=FALSE>>=
+library(knitr)
+knit_hooks$set(document = function(x) {sub('\\usepackage[]{color}', '\\usepackage{xcolor}', x, fixed = TRUE)})
 
-
-\documentclass{elsarticle}\usepackage[]{graphicx}\usepackage{xcolor}
-%% maxwidth is the original width if it is less than linewidth
-%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
-\makeatletter
-\def\maxwidth{ %
-  \ifdim\Gin@nat@width>\linewidth
-    \linewidth
-  \else
-    \Gin@nat@width
-  \fi
+theme_thesis <- function() {
+  theme_classic() +
+  theme(legend.position="bottom",
+        strip.background=element_rect(size = 0,color=NA,fill=NA),
+    axis.title.y=element_text(angle = 0,size=rel(0.8),vjust=0.5),
+    axis.title.x=element_text(size=rel(0.8)),
+    axis.text.y=element_text(size=rel(0.8)),
+    axis.text.x=element_text(size=rel(0.8)),
+    axis.line.x=element_line(size=0.8 ,color="black",linetype=1),
+    axis.line.y=element_line(size=0.8 ,color="black",linetype=1),
+    panel.grid.major=element_line(colour = "grey",size = 0.2,linetype = "solid"),
+    panel.grid.minor=element_line(colour = "grey",size = 0.2,linetype = "solid"),
+    panel.grid.major.x=element_line(colour = "grey",size = 0.2,linetype = "solid"),
+    panel.grid.minor.x=element_line(colour = "grey",size = 0.2,linetype = "solid"),
+    panel.grid.major.y=element_line(colour = "grey",size = 0.2,linetype = "solid"),
+    panel.grid.minor.y=element_line(colour = "grey",size = 0.2,linetype = "solid"),
+    strip.text.y = element_text(hjust = 0.5)
+  )
 }
-\makeatother
+@
 
-\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
-\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
-\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
-\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
-\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
-\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
-\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
-\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
-\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
-\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
-\let\hlipl\hlkwb
-
-\usepackage{framed}
-\makeatletter
-\newenvironment{kframe}{%
- \def\at@end@of@kframe{}%
- \ifinner\ifhmode%
-  \def\at@end@of@kframe{\end{minipage}}%
-  \begin{minipage}{\columnwidth}%
- \fi\fi%
- \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
- \colorbox{shadecolor}{##1}\hskip-\fboxsep
-     % There is no \\@totalrightmargin, so:
-     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
- \MakeFramed {\advance\hsize-\width
-   \@totalleftmargin\z@ \linewidth\hsize
-   \@setminipage}}%
- {\par\unskip\endMakeFramed%
- \at@end@of@kframe}
-\makeatother
-
-\definecolor{shadecolor}{rgb}{.97, .97, .97}
-\definecolor{messagecolor}{rgb}{0, 0, 0}
-\definecolor{warningcolor}{rgb}{1, 0, 1}
-\definecolor{errorcolor}{rgb}{1, 0, 0}
-\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
-
-\usepackage{alltt} 
+\documentclass{elsarticle} 
 
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -58,6 +31,7 @@
 \usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage{tikz}
+\usepackage{caption,subcaption}
 \usepackage{booktabs}
 \newtheorem{theorem}{Theorem}
 
@@ -72,7 +46,7 @@
 \newcommand{\missidentity}{\begin{bmatrix} 0 & 0 \\ 0 & \textbf{I }\end{bmatrix}}
 \newcommand{\Greg}{\left(\Xe^{T} \Xe + \lambda \missidentity \right)^{-1}}
 \newcommand{\Cb}{\mathcal{C}_{\beta}}
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
 \begin{document}
 
 \begin{frontmatter}
@@ -319,18 +293,49 @@ Setting the derivative of \eqref{eq:trueloss} with respect to $\beta$ to $0$ and
 
 In this last equation, since we assume $f_X(x)$ as given, the only unknown is the function $\mathbb{E}[y|x]$, the expectation of the label $y$, given $x$. Now suppose we consider every possible labeling of the unlimited number of unlabeled objects including fractional labels, that is, every possible function where $\mathbb{E}[y|x] \in [0,1]$. Given this restriction on $\mathbb{E}[y|x]$, the second integral in \eqref{eqn:sslsolution} becomes a re-weighted version of the expectation operation over $x$. By changing the choice of $\mathbb{E}[y|x]$ one can vary the value of this integral, but it will always be bounded on an interval on $\mathbb{R}$. It follows that all possible $\beta$'s also form an interval on $\mathbb{R}$, which is the constraint set $\Cb$. The optimal solution has to be in this interval, since it corresponds to a particular but unknown $\mathbb{E}[y|x]$.
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+<<constrainedproblem, echo=FALSE, warning=FALSE, dev='tikz', fig.width=4, fig.asp=0.5, fig.align='center', fig.cap="An example where implicitly constrained optimization improves performance. The supervised solution $\\hat{\\beta}_{sup}$ which minimizes the supervised loss (the solid curve), is not part of the interval of allowed solutions. The solution that minimizes this supervised loss within the allowed interval is $\\hat{\\beta}_{semi}$. This solution is closer to the optimal solution ${\\beta}^{\\ast}$ than the supervised solution $\\hat{\\beta}_{sup}$.">>=
+library(ggplot2)
+library(dplyr,warn.conflicts = FALSE)
 
-{\centering \includegraphics[width=\maxwidth]{figure/constrainedproblem-1} 
+df_points <- data.frame(
+              x=c(2,3,4.5),
+              y=0,
+              label=c("$\\hat{\\beta}_{sup}$","$\\hat{\\beta}_{semi}$","$\\beta^\\ast$"))
 
-}
+df_labels <- data.frame(
+              x=c(2.5,3.6,4.8),
+              y=0.5,
+              label=c("$\\hat{\\beta}_{sup}$","$\\hat{\\beta}_{semi}$","$\\beta^\\ast$"))
 
-\caption{An example where implicitly constrained optimization improves performance. The supervised solution $\hat{\beta}_{sup}$ which minimizes the supervised loss (the solid curve), is not part of the interval of allowed solutions. The solution that minimizes this supervised loss within the allowed interval is $\hat{\beta}_{semi}$. This solution is closer to the optimal solution ${\beta}^{\ast}$ than the supervised solution $\hat{\beta}_{sup}$.}\label{fig:constrainedproblem}
-\end{figure}
+df_lines <- data.frame(
+  
+  x=c(2,3,3,0,0),
+  xend=c(2,3,5,0,6),
+  y=c(0,0,0,0,0),
+  yend=c(1,2,0,3,0),
+  type=factor(c(2,2,1,3,3))
+)
 
-
-\end{knitrout}
+x <- seq(0,5,length.out=1000)
+p_save <- data.frame(x=x,y=(x-2)^2+1) %>% 
+  ggplot(aes(x=x,y=y)) +
+  geom_line(size=1) +
+  scale_x_continuous(limits = c(0,6)) +
+  scale_y_continuous(limits = c(0,3)) +
+  geom_point(data=df_points,size=4) +
+  geom_text(aes(label=label),data=df_labels,size=6) +
+  geom_segment(aes(xend=xend,yend=yend,linetype=type,size=type),data=df_lines) +
+  scale_size_manual(values=c("2"=1,"1"=2,"3"=0.5)) +
+  scale_linetype_manual(values=c("2"=2,"1"=1,"3"=1)) +
+  xlab("Solution") +
+  ylab("Squared Loss") +
+  theme_void() +
+  theme(plot.margin=unit(c(0.2,0.2,0.2,0.2),"cm"), legend.position="none",
+        axis.title=element_text(size=12,angle=0),
+        axis.title.x=element_text(size=14, face = "plain",family="Palatino",angle=0),
+        axis.title.y=element_text(size=14, face = "plain",family="Palatino",angle = 90))
+print(p_save)
+@
 
 Using the set of labeled data, we can construct a supervised solution $\hat{\beta}_{sup}$ that minimizes the loss on the training set of $\Nlab$ labeled objects (see Figure \ref{fig:constrainedproblem}):
   
@@ -426,21 +431,74 @@ We have no full explanation for the observed peaking behaviour in the semi-super
 
 This peaking behaviour is not the primary topic of this work and in the remainder we will restrict our attention to the case where there are enough labeled objects such that the matrix $\mathbf{X}^T \mathbf{X}$ is invertible. 
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
-\includegraphics[width=\maxwidth]{figure/peaking-1} \caption[Peaking phenomenon in Semi-supervised Least Squares Classification]{Peaking phenomenon in Semi-supervised Least Squares Classification. The lines indicate the Mean classification error for $\Nlab=\max(\featdim+5,20)$ and $1000$ repeats. The shaded areas indicate $+/-$ the standard error of the mean, which are so small in this case, they are barely perceptible.}\label{fig:peaking}
-\end{figure}
+<<peaking, fig.height=3.5, fig.width=6.5, dev='tikz', echo=FALSE, warning=FALSE, fig.cap="Peaking phenomenon in Semi-supervised Least Squares Classification. The lines indicate the Mean classification error for $\\Nlab=\\max(\\featdim+5,20)$ and $1000$ repeats. The shaded areas indicate $+/-$ the standard error of the mean, which are so small in this case, they are barely perceptible.">>=
+library(RSSL)
 
+## Visualize
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(reshape2,warn.conflicts = FALSE)
 
-\end{knitrout}
+load("../data/learningcurves-1000repeats-10labeled-peaking.RData")
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
-\includegraphics[width=\maxwidth]{figure/peakingzoom-1} \caption{Zoomed in version of Figure~\ref{fig:peaking}}\label{fig:peakingzoom}
-\end{figure}
+df_res <- 1:length(errorcurves) %>% lapply(function(x) {errorcurves[[x]]$results  %>% mutate(Dataset=names(errorcurves)[x])}) %>% bind_rows
 
+df_res  %>%
+  group_by(`Number of unlabeled objects`,Classifier,Measure,Dataset) %>%
+  summarize(Mean=mean(value),SE=sd(value)/sqrt(n())) %>% 
+  ungroup %>%
+  filter(Measure %in% c("Error")) %>% 
+  #filter(Classifier %in% c("Supervised","Self-Learning","ICLS")) %>% 
+  filter(Classifier!="ICLS_prior") %>% 
+  #filter(Classifier!="Oracle") %>% 
+  mutate(Dataset=paste0("\\textsc{",Dataset,"}")) %>% 
+  ggplot(aes(x=`Number of unlabeled objects`,y=Mean,color=Classifier,shape=Classifier)) +
+  geom_point(size=1.5) +
+  geom_line(aes(linetype=Classifier)) +
+  geom_ribbon(aes(ymax=Mean+1*SE,ymin=Mean-1*SE,fill=Classifier),size=0,alpha=0.4,color=0) +
+  #geom_errorbar(aes(ymax=Mean+2*SE,ymin=Mean-2*SE,fill=Classifier),width=0.1) +
+  #scale_x_continuous(trans = log2_trans()) +
+  scale_color_manual(values=c("grey","#8dd3c7","#bebada","#fb8072","yellow")) +
+  scale_fill_manual(values=c("grey","#8dd3c7","#bebada","#fb8072","yellow")) +
+  theme_thesis() +
+  scale_x_continuous(breaks=seq(0,150,50),
+                     minor_breaks=seq(0,150,10),
+                     expand = c(0,0),
+                     limits=c(0,150)) +
+  facet_wrap(~ Dataset,scales="free",ncol=4) +
+  xlab("Unlabeled objects")+
+  ylab("Error") +
+  labs(fill="",color="",linetype="",shape="") 
+@
 
-\end{knitrout}
+<<peakingzoom, fig.height=3.5, fig.width=6.5, dev='tikz', fig.cap="Zoomed in version of Figure~\\ref{fig:peaking}",echo=FALSE,warning=FALSE>>=
+df_res  %>%
+  group_by(`Number of unlabeled objects`,Classifier,Measure,Dataset) %>%
+  summarize(Mean=mean(value),SE=sd(value)/sqrt(n())) %>% 
+  ungroup %>%
+  filter(`Number of unlabeled objects`<=25) %>% 
+  filter(Measure %in% c("Error")) %>% 
+  #filter(Classifier %in% c("Supervised","Self-Learning","ICLS")) %>% 
+  filter(Classifier!="ICLS_prior") %>% 
+  #filter(Classifier!="Oracle") %>% 
+  mutate(Dataset=paste0("\\textsc{",Dataset,"}")) %>% 
+  ggplot(aes(x=`Number of unlabeled objects`,y=Mean,color=Classifier,shape=Classifier)) +
+  geom_point(size=1.5) +
+  geom_line(aes(linetype=Classifier)) +
+  geom_ribbon(aes(ymax=Mean+1*SE,ymin=Mean-1*SE,fill=Classifier),size=0,alpha=0.4,color=0) +
+  #geom_errorbar(aes(ymax=Mean+2*SE,ymin=Mean-2*SE,fill=Classifier),width=0.1) +
+  #scale_x_continuous(trans = log2_trans()) +
+  scale_color_manual(values=c("grey","#8dd3c7","#bebada","#fb8072","yellow")) +
+  scale_fill_manual(values=c("grey","#8dd3c7","#bebada","#fb8072","yellow")) +
+  scale_x_continuous(breaks=seq(0,50,5),minor_breaks=seq(0,50,1),expand = c(0,0),limits=c(0,25))+
+  facet_wrap(~ Dataset,scales="free",ncol=4) +
+  xlab("Unlabeled objects") +
+  ylab("Error") +
+  labs(fill="",color="",linetype="",shape="") +
+  theme_thesis()
+@
 
 \subsection{Comparison of Learning Curves}
 We study the behavior of the expected classification error of the ICLS procedure for different sizes of the unlabeled set. This statistic has two desired properties. First of all it should never be higher than the expected classification error of the supervised solution, which is based on only the labeled data. Secondly, the expected classification error should not increase as we add more unlabeled data. A semi-supervised classifier that has both these properties can be used safely, since adding unlabeled data and continuing to add more unlabeled data will never decrease performance, on average. 
@@ -453,21 +511,71 @@ The results of these experiments are shown in Figure \ref{fig:errorcurves}. We r
 
 This procedure of sampling labeled and unlabeled points is repeated $1000$ times and the average classification error (Figure \ref{fig:errorcurves}) and squared loss (Figure \ref{fig:losscurves}) on the test set is determined. The latter is done to evaluate whether the approach is effective in increasing generalization performance in terms of the loss used in estimating the classifier. This is the same loss that we consider in Theorem \ref{theorem:1d}. Even though in applications the ultimate goal may typically be classification performance, this allows us to study whether problems occur because of the optimization itself, or because of the link between the surrogate loss used and the classification error.
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
-\includegraphics[width=\maxwidth]{figure/errorcurves-1} \caption[Mean classification error for $\Nlab=\max(\featdim+5,20)$ and $1000$ repeats]{Mean classification error for $\Nlab=\max(\featdim+5,20)$ and $1000$ repeats. The shaded areas indicate $+/-$ the standard error of the mean, which are so small in some cases, they are barely perceptible.}\label{fig:errorcurves}
-\end{figure}
+<<errorcurves, dev='tikz', fig.height=6, fig.width=6.5, fig.cap="Mean classification error for $\\Nlab=\\max(\\featdim+5,20)$ and $1000$ repeats. The shaded areas indicate $+/-$ the standard error of the mean, which are so small in some cases, they are barely perceptible.",echo=FALSE,warning=FALSE>>=
+library(RSSL)
 
+load("../data/learningcurves-1000repeats-enoughlabeled-combined.Rdata")
 
-\end{knitrout}
+## Visualize
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(reshape2)
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
-\includegraphics[width=\maxwidth]{figure/losscurves-1} \caption[Mean squared loss on the test set for $\Nlab=\max(\featdim+5,20)$ and $1000$ repeats]{Mean squared loss on the test set for $\Nlab=\max(\featdim+5,20)$ and $1000$ repeats. The shaded areas indicate $+/-$ the standard error of the mean, which are so small in some cases, they are barely perceptible.}\label{fig:losscurves}
-\end{figure}
+df_res <- 1:length(errorcurves) %>% 
+  lapply(function(x) {errorcurves[[x]]$results  %>% 
+      mutate(Dataset=names(errorcurves)[x])}) %>% bind_rows
 
+df_res  %>%
+  group_by(`Number of unlabeled objects`,Classifier,Measure,Dataset) %>%
+  summarize(Mean=mean(value),SE=sd(value)/sqrt(n())) %>% 
+  ungroup %>%
+  filter(Measure %in% c("Error")) %>% 
+  #filter(Classifier %in% c("Supervised","Self-Learning","ICLS")) %>% 
+  filter(Classifier!="ICLS_prior") %>% 
+  filter(Classifier!="Oracle") %>% 
+  mutate(Dataset=paste0("\\textsc{",Dataset,"}")) %>% 
+  ggplot(aes(x=`Number of unlabeled objects`,y=Mean,color=Classifier,shape=Classifier)) +
+  geom_point(size=1.5) +
+  geom_line(aes(linetype=Classifier)) +
+  geom_ribbon(aes(ymax=Mean+1*SE,ymin=Mean-1*SE,fill=Classifier),size=0,alpha=0.4,color=0) +
+  #geom_errorbar(aes(ymax=Mean+2*SE,ymin=Mean-2*SE,fill=Classifier),width=0.1) +
+  scale_x_continuous(trans = log2_trans()) +
+  scale_color_manual(values=c("grey","#8dd3c7","#bebada","#fb8072")) +
+  scale_fill_manual(values=c("grey","#8dd3c7","#bebada","#fb8072")) +
+  theme_thesis() +
+  facet_wrap(~ Dataset,scales="free",ncol=4) +
+  xlab("Unlabeled objects")+
+  ylab("Error") +
+  theme(legend.position="bottom",strip.background=element_rect(size = 0),axis.title.y=element_text(angle = 0,size=rel(0.8)),axis.title.x=element_text(size=rel(0.8)),axis.text.y=element_text(size=rel(0.8)),axis.text.x=element_text(size=rel(0.8)))
+@
 
-\end{knitrout}
+<<losscurves, dev='tikz', fig.height=6, fig.width=6.5, fig.cap="Mean squared loss on the test set for $\\Nlab=\\max(\\featdim+5,20)$ and $1000$ repeats. The shaded areas indicate $+/-$ the standard error of the mean, which are so small in some cases, they are barely perceptible.",echo=FALSE,warning=FALSE>>=
+
+df_res  %>%
+  group_by(`Number of unlabeled objects`,Classifier,Measure,Dataset) %>%
+  summarize(Mean=mean(value),SE=sd(value)/sqrt(n())) %>% 
+  ungroup %>%
+  filter(Measure %in% c("Loss Test")) %>% 
+  #filter(Classifier %in% c("Supervised","Self-Learning","ICLS")) %>% 
+  filter(Classifier!="ICLS_prior") %>% 
+  filter(Classifier!="Oracle") %>% 
+  mutate(Dataset=paste0("\\textsc{",Dataset,"}")) %>% 
+  ggplot(aes(x=`Number of unlabeled objects`,y=Mean,color=Classifier,shape=Classifier)) +
+  geom_point(size=1.5) +
+  geom_line(aes(linetype=Classifier)) +
+  geom_ribbon(aes(ymax=Mean+1*SE,ymin=Mean-1*SE,fill=Classifier),size=0,alpha=0.4,color=0) +
+  #geom_errorbar(aes(ymax=Mean+2*SE,ymin=Mean-2*SE,fill=Classifier),width=0.1) +
+  scale_x_continuous(trans = log2_trans()) +
+  scale_color_manual(values=c("grey","#8dd3c7","#bebada","#fb8072")) +
+  scale_fill_manual(values=c("grey","#8dd3c7","#bebada","#fb8072")) +
+  theme_thesis()+
+  facet_wrap(~ Dataset,scales="free",ncol=4) +
+  xlab("Unlabeled objects")+
+  ylab("Squared\nLoss\nTest Set") +
+  theme(legend.position="bottom",strip.background=element_rect(size = 0),axis.title.y=element_text(angle = 0,size=rel(0.8)),axis.title.x=element_text(size=rel(0.8)),axis.text.y=element_text(size=rel(0.8)),axis.text.x=element_text(size=rel(0.8)))
+@
 
 We find that, generally, the ICLS procedure has monotonically decreasing error curves as the number of unlabeled samples increases, unlike self-learning. On the \textsc{Diabetes} and \textsc{Transfusion} datasets, the performance of self-learning becomes worse than the supervised solution when more unlabeled data is added, while the ICLS classifier again exhibits a monotonic decrease of the average error rate. The USM classifier performs well on most datasets except for the \textsc{Mammography} dataset, where both in terms of average error rates and squared loss, performance is worse than the supervised classifier.
 
@@ -484,28 +592,67 @@ The cross-validation procedure used here is slightly different from that describ
 \small
 \begin{tabular}{llllll}
   \toprule
-% latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Fri Jan 27 21:09:19 2017
-Dataset & Supervised & Self-Learning & USM & ICLS & Oracle \\ 
-  \midrule
-\textsc{Haberman} & 0.29 & \textbf{0.28 (33)} & 0.28 (42) & 0.29 (24) & 0.26 (11) \\ 
-  \textsc{Ionosphere} & 0.29 & 0.24 (1) & 0.22 (1) & \textbf{0.19 (0)} & 0.13 (0) \\ 
-  \textsc{Parkinsons} & 0.34 & 0.29 (5) & \textbf{0.25 (3)} & 0.26 (1) & 0.12 (0) \\ 
-  \textsc{Diabetes} & 0.32 & \underline{0.34 (83)} & 0.31 (31) & \textbf{0.31 (7)} & 0.23 (0) \\ 
-  \textsc{Sonar} & 0.42 & 0.37 (5) & 0.34 (3) & \textbf{0.33 (1)} & 0.25 (0) \\ 
-  \textsc{SPECT} & 0.41 & 0.39 (28) & \textbf{0.28 (0)} & 0.33 (1) & 0.18 (0) \\ 
-  \textsc{SPECTF} & 0.43 & 0.40 (14) & \textbf{0.31 (0)} & 0.36 (2) & 0.23 (0) \\ 
-  \textsc{Transfusion} & 0.27 & \underline{0.28 (63)} & \textbf{0.26 (30)} & 0.27 (25) & 0.23 (2) \\ 
-  \textsc{WDBC} & 0.27 & 0.18 (0) & 0.20 (2) & \textbf{0.13 (0)} & 0.04 (0) \\ 
-  \textsc{Mammography} & 0.28 & 0.28 (28) & 0.28 (54) & \textbf{0.27 (14)} & 0.20 (0) \\ 
-  \textsc{Digit1} & 0.42 & 0.34 (0) & 0.25 (0) & \textbf{0.20 (0)} & 0.06 (0) \\ 
-  \textsc{USPS} & 0.42 & 0.34 (0) & 0.22 (0) & \textbf{0.20 (0)} & 0.09 (0) \\ 
-  \textsc{COIL2} & 0.39 & 0.27 (0) & 0.24 (0) & \textbf{0.19 (0)} & 0.10 (0) \\ 
-  \textsc{BCI} & 0.41 & 0.35 (1) & 0.30 (0) & \textbf{0.28 (0)} & 0.16 (0) \\ 
-  \textsc{g241c} & 0.45 & 0.39 (0) & 0.30 (0) & \textbf{0.29 (0)} & 0.14 (0) \\ 
-  \textsc{g241d} & 0.45 & 0.39 (0) & 0.30 (0) & \textbf{0.29 (0)} & 0.13 (0) \\ 
-   \bottomrule
+<<cvresults,echo=FALSE,warning=FALSE,results="asis">>=
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(reshape2)
+library(xtable)
 
+load("../data/crossvalidation-100repeats-enoughlabeled-final.RData")
+
+format_cell <- function(number,bold,underscore, brackets) {
+  out <- sprintf("%.2f (%d)",number,brackets)
+  if (!(all(bold==FALSE))) {
+    out <- ifelse(!is.na(bold) & bold, paste0("\\textbf{",out,"}"),out)
+  }
+  if (!(all(underscore==FALSE))) {
+    out <- ifelse(!is.na(underscore) & underscore, paste0("\\underline{",out,"}"),out) 
+  }
+  out[1] <- sprintf("%.2f",number)
+  out
+}
+
+df_res <- 1:length(cvresults) %>% 
+  lapply(function(x) {
+    cvresults[[x]]$results %>% 
+      mutate(Dataset=names(cvresults)[x])}) %>% 
+  bind_rows %>% 
+  rename(Value=value)
+
+df_res$Dataset <- factor(df_res$Dataset,
+                             names(cvresults),
+                             paste0("\\textsc{",names(cvresults),"}"))
+
+class_names <- levels(df_res$Classifier)
+class_names[1:2] <- c("Sup","Self")
+
+df_publish <- df_res %>%
+  group_by(Dataset,Measure,`repeats`,Classifier) %>% 
+  summarize(Value=mean(Value)) %>%
+  ungroup %>% 
+  group_by(Dataset, Measure, `repeats`) %>% 
+  mutate(ValueDiff=Value-Value[Classifier=="Supervised"]) %>% 
+  ungroup %>% 
+  group_by(Dataset,Measure,Classifier) %>% 
+  summarize(
+    mean=mean(Value),
+    ttest=(wilcox.test(ValueDiff)$p.value<0.01 && mean(ValueDiff)>0),
+    bigger=sum(ValueDiff>0)
+    ) %>%
+  mutate(best=(mean==min(mean[Classifier!="Oracle"]))) %>% 
+  mutate(out=format_cell(mean, best, ttest, bigger)) %>%
+  select(-mean,-ttest,-bigger,-best) %>% 
+  ungroup %>% 
+  filter(Measure=="Error") %>%
+  spread(Classifier,out) %>%
+  select(-Measure) %>% 
+  as.data.frame
+
+
+print(xtable(df_publish),include.rownames=FALSE,sanitize.text.function=identity, only.contents=TRUE,booktabs=TRUE)
+@
 \end{tabular}
 \end{table}
 
@@ -521,28 +668,68 @@ USM performs well on many of the datasets, especially when we consider how simpl
 \centering
 \begin{tabular}{llllll}
 \toprule
-% latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Fri Jan 27 21:09:19 2017
-Dataset & Supervised & Self-Learning & TSVM & Oracle \\ 
-  \midrule
-\textsc{Haberman} & 0.29 & \textbf{0.29 (34)} & \underline{0.32 (92)} & 0.26 (8) \\ 
-  \textsc{Ionosphere} & 0.17 & \underline{0.18 (81)} & 0.17 (51) & 0.11 (0) \\ 
-  \textsc{Parkinsons} & 0.22 & \textbf{0.22 (32)} & 0.22 (60) & 0.14 (0) \\ 
-  \textsc{Diabetes} & 0.31 & 0.31 (40) & \textbf{0.28 (7)} & 0.23 (0) \\ 
-  \textsc{Sonar} & 0.26 & 0.26 (53) & \textbf{0.25 (33)} & 0.25 (25) \\ 
-  \textsc{SPECT} & 0.30 & 0.28 (13) & \textbf{0.25 (3)} & 0.18 (0) \\ 
-  \textsc{SPECTF} & 0.30 & 0.29 (28) & \textbf{0.28 (29)} & 0.21 (0) \\ 
-  \textsc{Transfusion} & 0.27 & 0.27 (59) & \underline{0.29 (96)} & 0.23 (0) \\ 
-  \textsc{WDBC} & 0.06 & 0.06 (53) & \textbf{0.05 (30)} & 0.03 (0) \\ 
-  \textsc{Mammography} & 0.27 & 0.28 (60) & \textbf{0.25 (3)} & 0.20 (0) \\ 
-  \textsc{Digit1} & 0.08 & \underline{0.08 (85)} & \textbf{0.06 (1)} & 0.05 (0) \\ 
-  \textsc{USPS} & 0.14 & 0.13 (17) & \textbf{0.12 (5)} & 0.11 (1) \\ 
-  \textsc{COIL2} & 0.16 & \underline{0.16 (75)} & \underline{0.19 (100)} & 0.09 (0) \\ 
-  \textsc{BCI} & 0.28 & \underline{0.29 (70)} & \underline{0.36 (99)} & 0.17 (0) \\ 
-  \textsc{g241c} & 0.22 & \underline{0.23 (87)} & \textbf{0.17 (0)} & 0.16 (0) \\ 
-  \textsc{g241d} & 0.23 & \underline{0.24 (90)} & \textbf{0.17 (0)} & 0.16 (0) \\ 
-   \bottomrule
+<<cvresults-svm,echo=FALSE,warning=FALSE,results="asis">>=
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(reshape2)
+library(xtable)
 
+load("../data/crossvalidation-svm-101repeats-enoughlabeled-final.RData")
+
+format_cell <- function(number,bold,underscore, brackets) {
+  out <- sprintf("%.2f (%d)",number,brackets)
+  if (!(all(bold==FALSE))) {
+    out <- ifelse(!is.na(bold) & bold, paste0("\\textbf{",out,"}"),out)
+  }
+  if (!(all(underscore==FALSE))) {
+    out <- ifelse(!is.na(underscore) & underscore, paste0("\\underline{",out,"}"),out) 
+  }
+  out[1] <- sprintf("%.2f",number)
+  out
+}
+
+df_res <- 1:length(cvresults) %>% 
+  lapply(function(x) {
+    cvresults[[x]]$results %>% 
+      mutate(Dataset=names(cvresults)[x])}) %>% 
+  bind_rows %>% 
+  rename(Value=value)
+
+df_res <- df_res %>% filter(repeats!=101)
+
+df_res$Dataset <- factor(df_res$Dataset,
+                         names(cvresults),
+                         paste0("\\textsc{",names(cvresults),"}"))
+
+class_names <- levels(df_res$Classifier)
+class_names[1:2] <- c("Sup","Self")
+
+df_publish <- df_res %>%
+  group_by(Dataset,Measure,`repeats`,Classifier) %>% 
+  summarize(Value=mean(Value)) %>%
+  ungroup %>% 
+  group_by(Dataset, Measure, `repeats`) %>% 
+  mutate(ValueDiff=Value-Value[Classifier=="Supervised"]) %>% 
+  ungroup %>% 
+  group_by(Dataset,Measure,Classifier) %>% 
+  summarize(
+    mean=mean(Value),
+    ttest=(wilcox.test(ValueDiff)$p.value<0.01 && mean(ValueDiff)>0),
+    bigger=sum(ValueDiff>0)
+  ) %>%
+  mutate(best=(mean==min(mean[Classifier!="Oracle"]))) %>% 
+  mutate(out=format_cell(mean, best, ttest, bigger)) %>%
+  select(-mean,-ttest,-bigger,-best) %>% 
+  ungroup %>% 
+  filter(Measure=="Error") %>%
+  spread(Classifier,out) %>%
+  select(-Measure) %>% 
+  as.data.frame
+
+print(xtable(df_publish),include.rownames=FALSE,sanitize.text.function=identity, only.contents=TRUE, booktabs = TRUE)
+@
 
 \end{tabular}
 \end{table}
@@ -575,13 +762,46 @@ In terms of the number of features, ICLS scales in the same way as the supervise
 
 Compared to ICLS, self-learning seems more favorable in terms of computational cost. Self-learning usually converges in a few iterations, where each iteration has at most the cost of one supervised least squares estimation. In our implementations, however, self-learning and ICLS had similar training times (Figure \ref{fig:timecurves}). USM with its simple closed form solution has much lower training times and performs surprisingly well.
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
-\includegraphics[width=\maxwidth]{figure/timecurves-1} \caption[Average Training Time for $1000$ repeats]{Average Training Time for $1000$ repeats. The shaded areas indicate $+/-$ the standard error of the mean.}\label{fig:timecurves}
-\end{figure}
+<<timecurves, fig.height=6, fig.width=6.5, dev='tikz', fig.cap="Average Training Time for $1000$ repeats. The shaded areas indicate $+/-$ the standard error of the mean.",echo=FALSE,warning=FALSE>>=
+library(RSSL)
 
+load("../data/learningcurves-1000repeats-enoughlabeled-combined.Rdata")
 
-\end{knitrout}
+## Visualize
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(reshape2)
+
+df_res <- 1:length(errorcurves) %>% 
+  lapply(function(x) {errorcurves[[x]]$results  %>% 
+      mutate(Dataset=names(errorcurves)[x])}) %>% bind_rows
+
+df_res  %>%
+  group_by(`Number of unlabeled objects`,Classifier,Measure,Dataset) %>%
+  summarize(Mean=mean(value),SE=sd(value)/sqrt(n())) %>% 
+  ungroup %>%
+  filter(Measure %in% c("Time")) %>% 
+  #filter(Classifier %in% c("Supervised","Self-Learning","ICLS")) %>% 
+  filter(Classifier!="ICLS_prior") %>% 
+  filter(Classifier!="Oracle") %>%
+  mutate(Dataset=paste0("\\textsc{",Dataset,"}")) %>% 
+  ggplot(aes(x=`Number of unlabeled objects`,y=Mean,color=Classifier,shape=Classifier)) +
+  geom_point(size=1.5) +
+  geom_line(aes(linetype=Classifier)) +
+  geom_ribbon(aes(ymax=Mean+1*SE,ymin=Mean-1*SE,fill=Classifier),size=0,alpha=0.4,color=0) +
+  #geom_errorbar(aes(ymax=Mean+2*SE,ymin=Mean-2*SE,fill=Classifier),width=0.1) +
+  scale_x_continuous(trans = log2_trans()) +
+  scale_y_continuous(trans = log2_trans(),labels=format_format(digits=2)) +
+  scale_color_manual(values=c("grey","#8dd3c7","#bebada","#fb8072")) +
+  scale_fill_manual(values=c("grey","#8dd3c7","#bebada","#fb8072")) +
+  theme_thesis() +
+  facet_wrap(~ Dataset,scales="free",ncol=4) +
+  xlab("Unlabeled objects")+
+  ylab("Time\n($\\log_2$ s)") +
+  theme(legend.position="bottom",strip.background=element_rect(size = 0),axis.title.y=element_text(angle = 0,size=rel(0.8)),axis.title.x=element_text(size=rel(0.8)),axis.text.y=element_text(size=rel(0.8)),axis.text.x=element_text(size=rel(0.8)))
+@
 
 \subsection*{Squared Loss}
 Generally, models used in practice do not directly minimize misclassification error. For computational reasons, often convex surrogate losses, such as the one employed here are minimized. It is therefore interesting to look at the performance of a classifier in terms of these surrogate losses \cite{Loog2016a}. We have chosen to restrict ourselves to a particular convex loss and attempted to ensure improvement in terms of this chosen loss function.
@@ -606,6 +826,7 @@ This work introduced a new semi-supervised approach to least squares classificat
 \section*{Acknowledgement}
 Part of this work was funded by project P23 of the Dutch public-private research community COMMIT.
 
+\section*{References}
 \bibliographystyle{elsarticle-num}
 \bibliography{library}
 

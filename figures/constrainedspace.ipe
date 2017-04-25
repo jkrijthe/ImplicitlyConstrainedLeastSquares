@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
-<ipe version="70005" creator="Ipe 7.1.4">
-<info created="D:20131002133847" modified="D:20141029101850"/>
+<ipe version="70206" creator="Ipe 7.2.6">
+<info created="D:20131002133847" modified="D:20160922213238"/>
+<preamble>\usepackage{mathpazo}
+\usepackage[cal=boondox]{mathalfa}</preamble>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -240,14 +242,14 @@ h
 h
 </path>
 <use name="mark/disk(sx)" pos="448 656" size="normal" stroke="black"/>
-<text matrix="1 0 0 1 4.34688 -8.1504" transformations="translations" pos="448 672" stroke="black" type="label" width="33.263" height="16.496" depth="4.91" valign="baseline" size="LARGE">$\hat{\beta}_{sup}$
+<text matrix="1 0 0 1 4.34688 -8.1504" transformations="translations" pos="448 672" stroke="black" type="label" width="34.167" height="15.716" depth="5.89" valign="baseline" size="LARGE">$\hat{\beta}_{sup}$
 </text>
-<text matrix="1 0 0 1 28.1965 -34.5203" transformations="translations" pos="280 728" stroke="black" type="label" width="26.116" height="16.927" depth="9.84" valign="baseline" size="Huge">$\mathcal{C}_{\beta}$</text>
-<text matrix="1 0 0 1 46.729 -11.4106" transformations="translations" pos="448 784" stroke="black" type="label" width="30.881" height="16.927" depth="9.84" valign="baseline" size="Huge">$\mathcal{F}_{\beta}$</text>
+<text matrix="1 0 0 1 28.1965 -34.5203" transformations="translations" pos="280 728" stroke="black" type="label" width="31.494" height="17.017" depth="11.9" valign="baseline" size="Huge" style="math">\mathcal{C}_{\beta}</text>
+<text matrix="1 0 0 1 62.729 -11.4106" transformations="translations" pos="448 784" stroke="black" type="label" width="31.916" height="16.843" depth="11.9" valign="baseline" size="Huge" style="math">\mathcal{F}_{\beta}</text>
 <use name="mark/disk(sx)" pos="224 560" size="normal" stroke="black"/>
-<text matrix="1 0 0 1 2.7168 6.01089" transformations="translations" pos="224 560" stroke="black" type="label" width="41.6" height="16.497" depth="3.35" valign="baseline" size="LARGE">$\hat{\beta}_{oracle}$</text>
+<text matrix="1 0 0 1 2.7168 6.01089" transformations="translations" pos="224 560" stroke="black" type="label" width="41.591" height="15.718" depth="4.76" valign="baseline" size="LARGE" style="math">\hat{\beta}_{oracle}</text>
 <use matrix="1 0 0 1 20 20" name="mark/disk(sx)" pos="338.116 646.217" size="normal" stroke="black"/>
-<text matrix="1 0 0 1 19.4566 4.5894" transformations="translations" pos="341.648 663.17" stroke="black" type="label" width="35.186" height="16.497" depth="3.35" valign="baseline" size="LARGE">$\hat{\beta}_{semi}$</text>
+<text matrix="1 0 0 1 19.4566 4.5894" transformations="translations" pos="341.648 663.17" stroke="black" type="label" width="34.155" height="15.718" depth="4.76" valign="baseline" size="LARGE" style="math">\hat{\beta}_{semi}</text>
 <path stroke="black">
 160 624
 192 688
