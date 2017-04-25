@@ -22,9 +22,9 @@ M.~Seeger, {Learning with labeled and unlabeled data}, Tech. rep. (2001).
 A.~Singh, R.~D. Nowak, X.~Zhu, {Unlabeled data: Now it helps, now it doesn't},
   in: Advances in Neural Information Processing Systems, 2008, pp. 1513--1520.
 
-\bibitem{Hastie2001}
+\bibitem{Hastie2009}
 T.~Hastie, R.~Tibshirani, J.~H. Friedman, {The Elements of Statistical
-  Learning}, Spinger, 2001.
+  Learning}, 2nd Edition, Spinger, 2009.
 
 \bibitem{Poggio2003}
 T.~Poggio, S.~Smale, {The Mathematics of Learning: Dealing with Data}, Notices
@@ -49,8 +49,9 @@ L.~Bottou, {Large-scale machine learning with stochastic gradient descent}, in:
 \bibitem{Krijthe2015}
 J.~H. Krijthe, M.~Loog, {Implicitly Constrained Semi-Supervised Least Squares
   Classification}, in: E.~Fromont, T.~D. Bie, M.~van Leeuwen (Eds.), 14th
-  International Symposium on Advances in Intelligent Data Analysis XIV, Saint
-  {\'{E}}tienne. France, 2015, pp. 158--169.
+  International Symposium on Advances in Intelligent Data Analysis XIV (Lecture
+  Notes in Computer Science Volume 9385), Saint {\'{E}}tienne. France, 2015,
+  pp. 158--169.
 
 \bibitem{Chapelle2006}
 O.~Chapelle, B.~Sch{\"{o}}lkopf, A.~Zien, {Semi-supervised learning}, MIT
@@ -59,8 +60,6 @@ O.~Chapelle, B.~Sch{\"{o}}lkopf, A.~Zien, {Semi-supervised learning}, MIT
 \bibitem{Zhu2009}
 X.~Zhu, A.~B. Goldberg, {Introduction to Semi-Supervised Learning}, Vol.~3,
   Morgan {\&} Claypool, 2009.
-\newblock \href {http://dx.doi.org/10.2200/S00196ED1V01Y200906AIM006}
-  {\path{doi:10.2200/S00196ED1V01Y200906AIM006}}.
 
 \bibitem{Nigam2000}
 K.~Nigam, A.~K. McCallum, S.~Thrun, T.~Mitchell, {Text classification from
@@ -149,7 +148,7 @@ M.~Loog, A.~C. Jensen, {Semi-Supervised Nearest Mean Classification through a
 \bibitem{Li2011}
 Y.-F. Li, Z.-h. Zhou, {Towards making unlabeled data never hurt}, in:
   Proceedings of the 28th International Conference on Machine Learning, 2011,
-  pp. 1081----1088.
+  pp. 1081--1088.
 
 \bibitem{Little2002}
 R.~J.~A. Little, D.~B. Rubin, {Statistical Analysis with Missing Data}, 2002.
@@ -164,10 +163,8 @@ J.~P. Shaffer, {The Gauss-Markov Theorem and Random Regressors}, The American
 
 \bibitem{Fan2008}
 B.~Fan, Z.~Lei, S.~Z. Li, {Normalized LDA for Semi-supervised Learning}, in:
-  8th IEEE International Conference on Automatic Face {\&} Gesture Recognition,
-  2008, pp. 1--6.
-\newblock \href {http://dx.doi.org/10.1109/AFGR.2008.4813329}
-  {\path{doi:10.1109/AFGR.2008.4813329}}.
+  International Conference on Automatic Face {\&} Gesture Recognition, 2008,
+  pp. 1--6.
 
 \bibitem{Byrd1995}
 R.~H. Byrd, P.~Lu, J.~Nocedal, C.~Zhu, {A limited memory algorithm for bound
@@ -181,24 +178,20 @@ N.~Sokolovska, O.~Capp{\'{e}}, F.~Yvon, {The asymptotics of semi-supervised
   Conference on Machine Learning, ACM Press, Helsinki, Finland, 2008, pp.
   984--991.
 
-\bibitem{Bache2013}
-K.~Bache, M.~Lichman, \href{http://archive.ics.uci.edu/ml}{{{\{}UCI{\}} Machine
-  Learning Repository}} (2013).
+\bibitem{Lichman2013}
+M.~Lichman, \href{http://archive.ics.uci.edu/ml}{{UCI Machine Learning
+  Repository}} (2013).
 \newline\urlprefix\url{http://archive.ics.uci.edu/ml}
 
 \bibitem{Opper1996}
 M.~Opper, W.~Kinzel, {Statistical Mechanics of Generalization}, in: E.~Domany,
   J.~L. Hemmen, K.~Schulten (Eds.), Models of Neural Networks III, Springer,
   New York, 1996, pp. 151--209.
-\newblock \href {http://dx.doi.org/10.1007/978-1-4612-0723-8{\_}5}
-  {\path{doi:10.1007/978-1-4612-0723-8{\_}5}}.
 
 \bibitem{Raudys1998}
-S.~Raudys, R.~P. Duin, {Expected classification error of the Fisher linear
+S.~Raudys, R.~P.~W. Duin, {Expected classification error of the Fisher linear
   classifier with pseudo-inverse covariance matrix}, Pattern Recognition
   Letters 19~(5-6) (1998) 385--392.
-\newblock \href {http://dx.doi.org/10.1016/S0167-8655(98)00016-6}
-  {\path{doi:10.1016/S0167-8655(98)00016-6}}.
 
 \bibitem{Skurichina1999}
 M.~Skurichina, R.~P.~W. Duin, {Regularisation of Linear Classifiers by Adding
@@ -214,7 +207,7 @@ M.~Loog, J.~H. Krijthe, A.~C. Jensen, {On Measuring and Quantifying
 
 \bibitem{Krijthe2014}
 J.~H. Krijthe, M.~Loog, {Implicitly Constrained Semi-Supervised Linear
-  Discriminant Analysis}, in: International Conference on Pattern Recognition,
-  Stockholm, 2014, pp. 3762--3767.
+  Discriminant Analysis}, in: Proceedings of the 22nd International Conference
+  on Pattern Recognition, Stockholm, 2014, pp. 3762--3767.
 
 \end{thebibliography}
